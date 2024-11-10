@@ -35,7 +35,7 @@ def is_multinomiallist(exprlist):
 
 
 
-def eqprint(inputstring):
+def exprprint(inputstring):
     inputstring = str(inputstring)
 
     inputstring = inputstring.removesuffix(")") if inputstring.startswith("Eq(") else inputstring 
@@ -72,8 +72,8 @@ def mass_factor_expressions(expressions: list, variable):
 
     if is_multinomiallist(expressions):
         for expression in expressions:
-            eqprint(expression)
-            eqprint(expression.factor())
+            exprprint(expression)
+            exprprint(expression.factor())
 
 
         
